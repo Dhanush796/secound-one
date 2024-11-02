@@ -39,3 +39,12 @@ h1 {
     background-color: #1565c0;
     color: #fff;
 }
+.link {
+    color: blue; /* Change the color to whatever you prefer */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the link bold */
+}
+
+.link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
