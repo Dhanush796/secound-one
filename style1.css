@@ -48,3 +48,19 @@ h1 {
 .link:hover {
     text-decoration: underline; /* Underline on hover */
 }
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
