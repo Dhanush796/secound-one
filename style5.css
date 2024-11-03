@@ -1,34 +1,91 @@
+/* Basic page styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: #282c34; /* Dark background color */
+    color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
+/* Container styling */
 .container {
+    background-color: #333;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
     max-width: 800px;
-    margin: auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 100%;
 }
 
+/* Heading styling */
 h1, h2 {
-    color: #333;
+    color: #ffdd57;
+    margin: 10px 0;
+    animation: fadeSlideIn 1s ease-out; /* Slide-in animation */
 }
 
+/* Link styling */
 .link {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #28a745; /* Green background */
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .link:hover {
-    background-color: #0056b3;
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Video and audio styling */
+video, audio {
+    border: 3px solid #ffdd57; /* Yellow border */
+    border-radius: 5px;
+    margin: 15px 0;
+    animation: fadeInScale 1s ease-in-out; /* Scale-up animation */
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeSlideIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Background graphic (subtle gradient) */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+    z-index: -1; /* Places the gradient behind content */
+}
+
+/* Button hover animation */
+.button:hover {
+    background-color: #ff6347;
+    transform: translateY(-2px); /* Button rises slightly on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
